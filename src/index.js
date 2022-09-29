@@ -52,10 +52,40 @@ student1.greet();
 //Tambien se puede con una función constructora
 
 function constructorStudent(name, semester) {
-  /*this.name_std = name;
+  this.name_std = name;
   this.semester = semester;
   this.subjects = [];
-  this.greet = función(){
+  this.greet = function(){
     console.log("Hola", name);
-  };*/
+  };
 }
+
+function constructorStudent(name, semester) {
+  this.name_std = name;
+  this.semester = semester;
+  this.subjects = [];
+  this.greet = function () {
+    console.log("Hola", name);
+  };
+}
+  
+const student2 = constructorStudent("Alex", 2);
+student2.greet();
+  
+/*Al utilizar el operador new, realiza:
+  1. Crear un objeto vacion con{}
+  2. Asigna this para que apunte a este objeto, porque por defecto apunta al objeto 
+  al objeto global, lo cual es mala practica.
+  3. Devuelve el objeto creado por la funcion el return this se hace implicitamente
+ */
+  
+console.log(student1.constructor);
+console.log(student2.constructor);
+  
+/*  Las funciones como los object literal tienen como constructor el de la clase object.
+    Todas las variables se crean a partir de constructores let x = {} viene de 
+    let x = new object()
+    '' viene new String()
+    true viene de new boolean()
+    1 viene de new number().
+*/
