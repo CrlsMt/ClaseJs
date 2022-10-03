@@ -89,3 +89,8 @@ console.log(student2.constructor);
     true viene de new boolean()
     1 viene de new number().
 */
+
+/*const functionStudent = new function('name', 'semester', '
+
+')*/
+
